@@ -4,17 +4,22 @@
 
 var http = require('http');
 var fs = require('fs');
-// Configure our HTTP server to respond with Hello World to all requests.
-var server = http.createServer(function (request, response) {
-fs.readFile('views/profile.ejs', function(err, data) {
-  response.writeHead(200, {"Content-Type": "text/html"});
- response.write(data);
-  response.end();
-});
+var express = require('express');
+var app = express();
+app.use( express.static( "public" ) );
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+// use res.render to load up an ejs view file
+
+// index page
+app.get('/', function (req, res) {
+    res.render('pages/index');
 });
 
-// Listen on port 8000, IP defaults to 127.0.0.1
-server.listen(8000,'128.199.201.116');
+// about page
+app.get('/about', function (req, res) {
+    res.render('pages/about');
+});
 
-// Put a friendly message on the terminal
-console.log("Server running at http://128.199.201.116:8000")
+app.listen(8080);
+console.log('8080 is the magic port');

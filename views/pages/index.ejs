@@ -1,9 +1,16 @@
-<html>
-<head><title>W3.CSS Template</title>
-    <% include ../partials/head %>
+<!-- views/pages/index.ejs -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
 </head>
 <body class="w3-light-grey">
+
+<header>
+    <% include ../partials/header %>
+</header>
+
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -16,7 +23,7 @@
 
             <div class="w3-white w3-text-grey w3-card-4">
                 <div class="w3-display-container">
-                    <%= img_tag('avatar_hat.jpg') %>
+                    <img  src="avatar.jpg">
 
                     <div class="w3-display-bottomleft w3-container w3-text-black">
                         <h2>Tharanga Jayasinghe</h2>
@@ -136,9 +143,9 @@
 
     <!-- End Page Container -->
 </div>
-
-<% include ../partials/footer %>
-
+<footer>
+    <% include ../partials/footer %>
+</footer>
 
 </body>
 </html>
