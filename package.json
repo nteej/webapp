@@ -1,0 +1,26 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "My Web Profile",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nteej/webapp.git"
+  },
+  "keywords": [
+    "tharanga",
+    "tcoder",
+    "nodejs",
+    "ejs"
+  ],
+  "author": "TCoder (Tharanga Jayasinghe)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nteej/webapp/issues"
+  },
+  "homepage": "https://github.com/nteej/webapp#readme"
+}
