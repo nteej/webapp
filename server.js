@@ -20,6 +20,10 @@ app.get('/', function (req, res) {
 app.get('/about', function (req, res) {
     res.render('pages/about');
 });
+// Admin page
+app.get('/admin', function (req, res) {
+    res.render('pages/admin/index');
+});
 
 app.listen(8000);
 console.log('8000 is the magic port');
